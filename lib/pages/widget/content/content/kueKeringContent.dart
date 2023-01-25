@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:posapp/pages/widget/content/card/contentCard.dart';
 import '../../../theme.dart';
+import '../card/contentCard.dart';
 
-class rekomendasiContent extends StatelessWidget {
-  const rekomendasiContent({super.key});
+class kueKeringContent extends StatelessWidget {
+  const kueKeringContent({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class rekomendasiContent extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(16),
             child: Text(
-              'Rekomendasi',
+              'Kue Kering',
               style: HeadingM.copyWith(color: Neutral00),
             ),
           ),

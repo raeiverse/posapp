@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:posapp/pages/widget/content/card/contentCard.dart';
+import 'package:posapp/pages/widget/content/content/kueKeringContent.dart';
 import 'package:posapp/pages/widget/content/content/rekomendasiContent.dart';
 import '../../theme.dart';
 
@@ -20,6 +21,7 @@ class contentMain extends StatelessWidget {
         child: Column(
           children: [
             rekomendasiContent(),
+            kueKeringContent(),
           ],
         ),
       ),
