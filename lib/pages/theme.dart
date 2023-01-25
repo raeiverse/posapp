@@ -1,6 +1,7 @@
 // ignore_for_file: non_constant_identifier_names, prefer_const_constructors
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // NOTE : FONTWEIGHTS
@@ -27,6 +28,7 @@ TextStyle TextS_Regular = GoogleFonts.inter(fontSize: 12, fontWeight: regular);
 // NOTE : COLORS
 Color backgroundColor = Color(0xffF5F5FF);
 Color containerColor = Color(0xffFFFFFF);
+Color transparentColor = Colors.transparent;
 
 // NOTE : NEUTRAL COLORS
 Color Neutral10 = Color(0xffFFFFFF);

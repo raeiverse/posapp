@@ -9,7 +9,7 @@ class contentHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 32),
+      margin: EdgeInsets.only(top: 62),
       width: double.infinity,
       height: 84,
       decoration: BoxDecoration(
@@ -44,6 +44,7 @@ class contentHeader extends StatelessWidget {
           Container(
             child: Row(
               children: [
+                // NOTE : ICON SETTING
                 Container(
                   margin: EdgeInsets.only(right: 16),
                   width: 32,
@@ -63,6 +64,7 @@ class contentHeader extends StatelessWidget {
                     ),
                   ),
                 ),
+                // NOTE : ICON HISTORY
                 Container(
                   margin: EdgeInsets.only(right: 16),
                   width: 32,
@@ -82,6 +84,7 @@ class contentHeader extends StatelessWidget {
                     ),
                   ),
                 ),
+                // NOTE : PROFILE
                 Container(
                   margin: EdgeInsets.only(right: 32),
                   child: Row(

@@ -13,33 +13,32 @@ class mainpage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: backgroundColor,
-      body: SafeArea(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Container(
-              alignment: Alignment.topLeft,
-              margin: EdgeInsets.only(left: 40),
-              width: MediaQuery.of(context).size.width / 1.55,
-              // color: containerColor,
-              child: SingleChildScrollView(
-                scrollDirection: Axis.vertical,
-                child: Column(
-                  children: [
-                    contentHeader(),
-                    contentKategori(),
-                    contentMain(),
-                  ],
-                ),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Container(
+            alignment: Alignment.topLeft,
+            margin: EdgeInsets.only(left: 40),
+            width: MediaQuery.of(context).size.width / 1.5,
+
+            // color: containerColor,
+            child: SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Column(
+                children: [
+                  contentHeader(),
+                  contentKategori(),
+                  contentMain(),
+                ],
               ),
             ),
-            Container(
-              alignment: Alignment.topRight,
-              width: MediaQuery.of(context).size.width / 3.5,
-              color: containerColor,
-            ),
-          ],
-        ),
+          ),
+          Container(
+            alignment: Alignment.topRight,
+            width: MediaQuery.of(context).size.width / 3.5,
+            color: containerColor,
+          ),
+        ],
       ),
     );
   }

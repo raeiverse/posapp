@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:posapp/pages/widget/content/card/contentCard.dart';
+import 'package:posapp/pages/widget/content/content/rekomendasiContent.dart';
 import '../../theme.dart';
 
 class contentMain extends StatelessWidget {
@@ -9,10 +11,18 @@ class contentMain extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(top: 32),
       width: double.infinity,
+      height: MediaQuery.of(context).size.height / 1.9,
       decoration: BoxDecoration(
         color: containerColor,
       ),
-      child: Text('INI CONTENT UTAMA'),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          children: [
+            rekomendasiContent(),
+          ],
+        ),
+      ),
     );
   }
 }
