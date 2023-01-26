@@ -8,7 +8,7 @@ class detailOrderBiaya extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 51),
+      padding: EdgeInsets.symmetric(horizontal: 31),
       child: Column(
         children: [
           Row(

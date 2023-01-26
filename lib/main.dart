@@ -1,8 +1,15 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:posapp/pages/cubit/kategori_cubit.dart';
+import 'package:posapp/pages/cubit/produk_cubit.dart';
+import 'package:posapp/pages/cubit/select_cubit.dart';
 import 'package:posapp/pages/ui/mainpage.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -16,9 +23,22 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.landscapeLeft,
       DeviceOrientation.landscapeRight,
     ]);
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: mainpage(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => KategoriCubit(),
+        ),
+        BlocProvider(
+          create: (context) => ProdukCubit(),
+        ),
+        BlocProvider(
+          create: (context) => SelectCubit(),
+        ),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: mainpage(),
+      ),
     );
   }
 }

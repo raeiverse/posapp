@@ -94,7 +94,7 @@ class contentHeader extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'Raeivere',
+                            'Raeiverse',
                             style: TextL_Medium.copyWith(color: Neutral90),
                           ),
                           Text(

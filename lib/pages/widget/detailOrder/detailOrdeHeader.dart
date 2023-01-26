@@ -9,7 +9,7 @@ class detailOrderHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: 62),
-      padding: EdgeInsets.symmetric(horizontal: 51),
+      padding: EdgeInsets.symmetric(horizontal: 31),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

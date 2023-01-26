@@ -35,13 +35,7 @@ class detailOrderLayanan extends StatelessWidget {
             'Layanan',
             style: TextM_Medium.copyWith(color: Neutral00),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              layananCard(),
-              layananCard(),
-            ],
-          ),
+          layananCard(),
           Text(
             'Nama',
             style: TextM_Medium.copyWith(color: Neutral00),

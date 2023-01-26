@@ -7,7 +7,7 @@ class pembayaranCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 99,
+      width: MediaQuery.of(context).size.width / 16,
       height: 88,
       child: Column(
         children: [
