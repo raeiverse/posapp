@@ -2,15 +2,19 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:posapp/pages/cubit/cari_cubit.dart';
 import 'package:posapp/pages/cubit/kategori_cubit.dart';
 import 'package:posapp/pages/widget/content/card/kategoriCard.dart';
 import '../../theme.dart';
 
 class contentKategori extends StatelessWidget {
-  const contentKategori({super.key});
+  const contentKategori({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController diCari = TextEditingController(text: '');
     return BlocBuilder<KategoriCubit, int>(
       builder: (context, state) {
         return Container(
@@ -38,6 +42,7 @@ class contentKategori extends StatelessWidget {
                       margin: EdgeInsets.only(right: 4),
                       child: TextField(
                         textAlignVertical: TextAlignVertical.bottom,
+                        controller: diCari,
                         decoration: InputDecoration(
                           hintText: 'Cari menu',
                           hintStyle: TextM_Regular.copyWith(color: Neutral60),
@@ -47,18 +52,24 @@ class contentKategori extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
-                      width: 32,
-                      height: 32,
-                      decoration: BoxDecoration(
-                        color: MainColor,
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Center(
-                        child: Image.asset(
-                          'assets/images/kategori_Search.png',
-                          width: 16,
-                          height: 16,
+                    GestureDetector(
+                      onTap: () {
+                        context.read<CariCubit>().diCari(diCari.text);
+                        context.read<KategoriCubit>().setPage(1);
+                      },
+                      child: Container(
+                        width: 32,
+                        height: 32,
+                        decoration: BoxDecoration(
+                          color: MainColor,
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: Center(
+                          child: Image.asset(
+                            'assets/images/kategori_Search.png',
+                            width: 16,
+                            height: 16,
+                          ),
                         ),
                       ),
                     ),
@@ -77,32 +88,32 @@ class contentKategori extends StatelessWidget {
                         namaKategori: 'Semua',
                       ),
                       kategoriCard(
-                        index: 1,
+                        index: 2,
                         imageUrl: 'assets/images/kategori_KueKering.png',
                         namaKategori: 'Kue Kering',
                       ),
                       kategoriCard(
-                        index: 2,
+                        index: 3,
                         imageUrl: 'assets/images/kategori_Roti.png',
                         namaKategori: 'Roti',
                       ),
                       kategoriCard(
-                        index: 3,
+                        index: 4,
                         imageUrl: 'assets/images/kategori_Pudding.png',
                         namaKategori: 'Pudding',
                       ),
                       kategoriCard(
-                        index: 4,
+                        index: 5,
                         imageUrl: 'assets/images/kategori_Tart.png',
                         namaKategori: 'Tart Potong',
                       ),
                       kategoriCard(
-                        index: 5,
+                        index: 6,
                         imageUrl: 'assets/images/kategori_Minuman.png',
                         namaKategori: 'Minuman',
                       ),
                       kategoriCard(
-                        index: 6,
+                        index: 7,
                         imageUrl: 'assets/images/kategori_Biskuit.png',
                         namaKategori: 'Biskuit',
                       ),

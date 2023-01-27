@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:posapp/pages/cubit/cari_cubit.dart';
 import 'package:posapp/pages/cubit/kategori_cubit.dart';
 import 'package:posapp/pages/cubit/produk_cubit.dart';
 import 'package:posapp/pages/cubit/select_cubit.dart';
@@ -33,6 +34,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => SelectCubit(),
+        ),
+        BlocProvider(
+          create: (context) => CariCubit(),
         ),
       ],
       child: MaterialApp(

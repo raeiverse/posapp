@@ -21,6 +21,7 @@ class mainpage extends StatelessWidget {
       backgroundColor: backgroundColor,
       body: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
             alignment: Alignment.topLeft,

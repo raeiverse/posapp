@@ -25,7 +25,7 @@ class produkModel extends Equatable {
       produkModel(
         id: id,
         imageUrl: json['imageUrl'],
-        namaProduk: json['namaProduk'],
+        namaProduk: json['namaProduk'].toLowerCase(),
         hargaProduk: json['hargaProduk'],
         diskonProduk: json['diskonProduk'],
         promoProduk: json['promoProduk'],

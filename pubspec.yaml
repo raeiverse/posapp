@@ -43,6 +43,8 @@ dependencies:
   firebase_auth: ^4.2.5
   firebase_core: ^2.4.1
   equatable: ^2.0.5
+  liquid_pull_to_refresh: ^3.0.1
+  recase: ^4.1.0
 
 dev_dependencies:
   flutter_test:

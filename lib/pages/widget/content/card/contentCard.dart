@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recase/recase.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:posapp/pages/cubit/select_cubit.dart';
 import 'package:posapp/pages/model/produkModel.dart';
@@ -19,10 +20,7 @@ class contentCard extends StatelessWidget {
       onTap: () {
         context.read<SelectCubit>().selectProduct(dataProduk.id);
         if (isSelected == true) {
-          
-        } else if(isSelected == false){
-          
-        }
+        } else if (isSelected == false) {}
       },
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 16),
@@ -67,7 +65,7 @@ class contentCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      dataProduk.namaProduk,
+                      dataProduk.namaProduk.titleCase,
                       style: TextL_Medium.copyWith(
                         color: Neutral00,
                       ),
